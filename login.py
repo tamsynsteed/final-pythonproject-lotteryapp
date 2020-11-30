@@ -28,7 +28,7 @@ def qualify(): #verifies player based on age. raises an error if input a string,
         if age >= 18:
             messagebox.showinfo("Verified.", "You qualify to take part in the National Lottery.")
 
-        file=open('/home/user/Desktop/lotto.txt','w') #created txt file tat saves the players details
+        file=open('/home/user/PycharmProjects/Final.eom.py/lotto.txt','w') #created txt file tat saves the players details
         file.write(
         "Player:" + str(entryname.get())+" "+str(entrysurname.get()+"\n"+
         "Age:" + str(entry1.get())+"\n"+

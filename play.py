@@ -33,14 +33,15 @@ def user_list():
 
     except ValueError: #this raises an error if the entries are not integers
 
+
         messagebox.showerror("Invalid Entries", "Please check for duplicates or empty textboxes.\n\nEnsure that all entries are numerical values.")
-        userNumbers=(0)
+        userNumbers=()
+
 
 
     for i in userNumbers:
         if i > 49:
             messagebox.showerror("Invalid Entry", "Numbers cannot be greater than 49")
-
 
     else:
          label3.config(text=str("These are your chosen numbers:\n"+str(userNumbers)))
@@ -69,7 +70,7 @@ def lotto_numbers(): #generates 6 random numbers
     if counter == 6:
         messagebox.showinfo("Congratulations! You are our WINNER!! You have won R10 000!!!")
 
-        file=open('/home/user/Desktop/lotto.txt','a') #appends this to the txt file
+        file=open('/home/user/PycharmProjects/Final.eom.py/lotto.txt','a') #appends this to the txt file
         file.write("\n"+"Amount Payable: You have won R 10 000")
         file.close()
 
@@ -77,7 +78,7 @@ def lotto_numbers(): #generates 6 random numbers
 
         messagebox.showinfo("Congrtaulations! You have won R 8,584.00")
 
-        file=open('/home/user/Desktop/lotto.txt','a')
+        file=open('/home/user/PycharmProjects/Final.eom.py/lotto.txt','a')
         file.write("\n"+"Amount Payable: You have won R 8,584.00")
         file.close()
 
@@ -100,13 +101,13 @@ def lotto_numbers(): #generates 6 random numbers
     elif counter ==2:
 
         messagebox.showinfo("Thank you for playing","You have won R 20")
-        file=open('/home/user/Desktop/lotto.txt','a')
+        file=open('/home/user/PycharmProjects/Final.eom.py/lotto.txt','a')
         file.write("\n"+"Amount Payable:You have won R20.")
         file.close()
 
     elif counter <=1:
         messagebox.showinfo("Thank you for playing","You have not won anything.")
-        file=open('/home/user/Desktop/lotto.txt','a')
+        file=open('/home/user/PycharmProjects/Final.eom.py/lotto.txt','a')
         file.write("\n"+"Amount Payable: You have not won anything.")
 
         file.close()
